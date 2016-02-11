@@ -1,0 +1,19 @@
+@(id: String, foos: List[String])
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FooTitle</title>
+</head>
+<body>
+    <form action="@routes.Application.handlePost" method="post">
+        @for(foo <- foos){
+            <input type="radio" name=@foo value="200" checked><label>200</label>
+            <input type="radio" name=@foo value="400"><label>400</label>
+            <input type="radio" name=@foo value="600"><label>600</label>
+            <br>
+        }
+        <input type="submit">
+    </form>
+</body>
+</html>
